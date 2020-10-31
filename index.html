@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PathFinding Visualizer</title>
+  <link rel="stylesheet" type="text/css" href="visualizer.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00161E;">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo2.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        PathFinding Visualizer
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown btn-space" id="algorithms" style="margin-left: 25px;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Algorithms
+            </a>
+            <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Breadth-First Search</a>
+              <a class="dropdown-item" href="#">Depth-First Search</a>
+              <a class="dropdown-item" href="#">Dijkstra's Algorithm</a>
+              <a class="dropdown-item" href="#">A* Search</a>
+              <a class="dropdown-item" href="#">Swarm Algorithm</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown btn-space" id="mazes">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Mazes & Patterns
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Recursive Division</a>
+              <a class="dropdown-item" href="#">Basic Random Maze</a>
+              <a class="dropdown-item" href="#">Basic Weight Maze</a>
+              <a class="dropdown-item" href="#">Simple Stair Pattern</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown btn-space" id="speed">
+            <a class="nav-link dropdown-toggle Visualizerspeed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Speed: Fast<span id="selected"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Fast</a>
+              <a class="dropdown-item" href="#">Average</a>
+              <a class="dropdown-item" href="#">Slow</a>
+            </div>
+          </li>
+        </ul>
+        <!-- <form class="form-inline"> -->
+          <button class="btn btn-outline-success btn-lg" id="startBtn" type="button" style="margin-right: 15px;" >Visualize</button>
+          <button class="btn btn-outline-danger btn-space" id="clearBtn" type="button">Clear Board</button>
+        <!-- </form> -->
+
+      </div>
+    </nav>
+
+
+  <div class="d-flex flex-row flex-wrap m-2 justify-content-around">
+    <div class="d-flex p-2">
+      <div class="key startT"></div>
+      <div>Start Node</div>
+    </div>
+    <div class="d-flex p-2">
+      <div class="key endT"></div>
+      <div>Target Node</div>
+    </div>
+    <div class="d-flex p-2">
+      <div class="key wall"></div>
+      <div>Hurdle / Wall</div>
+    </div>
+    <div class="d-flex p-2">
+      <div class="key searching"></div>
+      <div class="key visited"></div>
+      <div>Visited Nodes</div>
+    </div>
+    <div class="d-flex p-2">
+      <div class="key success"></div>
+      <div>Shortest-Path Node</div>
+    </div>
+    <div class="d-flex p-2">
+      <div class="key unvisited"></div>
+      <div>Unvisited Nodes</div>
+    </div>
+  </div>
+
+  <main>
+      <div class="d-flex flex-column align-items-center" id="bigTableContainer">
+        <div id="tableContainer"></div>
+      </div>
+
+  </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="visualizer.js"></script>
+
+</body>
+
+</html>

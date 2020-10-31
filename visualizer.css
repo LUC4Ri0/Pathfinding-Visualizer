@@ -1,0 +1,71 @@
+body {
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.key {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+#bigTableContainer {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+td {
+    border: 1px solid #79d9ce;
+    width: 20px;
+    height: 20px;
+}
+
+.start {
+    background-image: url("images/triangletwo-right.svg");
+}
+
+.startT {
+    background-image: url("images/triangletwo-right.svg");
+}
+
+.end {
+    background-image: url("images/circle.svg");
+}
+
+.endT {
+    background-image: url("images/circle.svg");
+}
+
+.wall {
+    transition: background-color 0.1s ease-in-out;
+    background-image: url("images/weight.svg");
+}
+
+.visited {
+    transition: background-color 0.08s ease-in-out;
+    background-color: #7C00A7;
+    border-color: #7C00A7;
+}
+
+.searching {
+    transition: background-color 0.08s ease-in-out;
+    background-color: #C2EC15;
+    border-color: #C2EC15;
+}
+
+.success {
+    transition: background-color 0.08s ease-in-out;
+    background-color: #D3006C;
+    border-color: #D3006C;
+}
+
+.unvisited {
+    border: 1px solid #79d9ce;
+}
+
+.btn-space {
+    margin-right: 15px;
+}
