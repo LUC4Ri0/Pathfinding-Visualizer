@@ -7,8 +7,8 @@ var algorithm = null;
 var justFinished = false;
 var animationSpeed = "Fast";
 var animationState = null;
-var startCell = [1, 60];
-var endCell = [38, 1];
+var startCell = [4, 10];
+var endCell = [5, 60];
 var movingStart = false;
 var movingEnd = false;
 
@@ -137,6 +137,7 @@ $("#clearBtn").click(function () {
 $("#algorithms .dropdown-item").click(function () {
     if (inProgress) { update("wait"); return; }
     algorithm = $(this).text();
+    
     updatealgo();
 });
 
@@ -149,7 +150,7 @@ $("#speed .dropdown-item").click(function () {
 $("#mazes .dropdown-item").click(function () {
     if (inProgress) { update("wait"); return; }
     maze = $(this).text();
-    if (maze == "Random") {
+    if (maze == "Random Maze Generation") {
         randomMaze();
     }
 });
@@ -183,10 +184,10 @@ function updateSpeedDisplay() {
 }
 
 function updatealgo() {
-    if (algorithm == "Depth-First Search") {
+    if (algorithm == "Breadth-First Search") {
+        $(".algo").text("Breadth-First Search");
+    } else if (algorithm == "Depth-First Search") {
         $(".algo").text("Depth-First Search");
-    } else if (algorithm == "Breadth-First Search") {
-        $(".algo").text("BFS (Breadth-First Search");
     }
     return;
 }
@@ -197,11 +198,11 @@ async function traverseGraph(algorithm) {
     var pathFound = executeAlgo();
     
     await animateCells();
-    if (pathFound) {
-        alert("Path Found")
-    } else {
-        alert("Path Not Found");
-    }
+    // if (pathFound) {
+    //     alert("Path Found")
+    // } else {
+    //     alert("Path Not Found");
+    // }
     inProgress = false;
     justFinished = true;
 }
